@@ -15,11 +15,10 @@
 # tellraw @a {"translate": "s2t.datapack.difficulty.uhc", "bold": true, "color": "red", "clickEvent": {"action": "run_command","value":"/function pack:basic/uhc"},"hoverEvent": {"action": "show_text","contents": {"translate": "s2t.datapack.difficulty.uhc.hover", "color": "red"}}}
 
 tellraw @a {"text": "-----", "color": "dark_gray"}
-tellraw @a {"translate":"stt.name", "bold": true, "color": "green", "hoverEvent": {"action":"show_text","contents": {"translate": "stt.author", "color": "dark_green"}}}
+tellraw @a {"translate":"stt.name", "bold": true, "color": "green", "hoverEvent": {"action":"show_text","contents": {"translate": "stt.author", "color": "yellow"}},"clickEvent": {"action": "copy_to_clipboard","value": "https://github.com/ami-amai/slower-that-turtle/"}}
 tellraw @a {"translate": "stt.version", "color": "dark_gray"}
 tellraw @a ""
-tellraw @a {"translate": "stt.world.features.title", "color": "yellow", "hoverEvent": {"action": "show_text", "contents": {"translate": "stt.world.features", "color": "gray"}}}
 tellraw @a {"translate": "stt.player.features.title", "color": "yellow", "hoverEvent": {"action": "show_text", "contents": {"translate": "stt.player.features", "color": "gray"}}}
-tellraw @a {"translate": "stt.mob.features.title", "color": "yellow", "hoverEvent": {"action": "show_text", "contents": {"translate": "stt.mob.features", "color": "gray"}}}
+tellraw @a {"translate": "stt.world.features.title", "color": "yellow", "hoverEvent": {"action": "show_text", "contents": {"translate": "stt.world.features", "color": "gray"}}}
 tellraw @a {"translate": "stt.resourcepack.features.title", "color": "yellow", "hoverEvent": {"action": "show_text", "contents": {"translate": "stt.resourcepack.features", "color": "gray"}}}
 tellraw @a {"text": "-----", "color": "dark_gray"}
