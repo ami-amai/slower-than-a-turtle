@@ -1,6 +1,6 @@
 # Slower That a Turtle Hardcore Datapack
 ## Introduction
-This is my first publicly released Minecraft datapack. It’s a work in progress, but I aim to eventually shape it into the experience I’ve imagined.
+This is my first publicly released Minecraft datapack for 1.21+ version. It’s a work in progress, but I aim to eventually shape it into the experience I’ve imagined.
 ## About the datapack
 The datapack offers a new survival experience in a hardcore world, focused on slow, deliberate progression and a real hardcore feel—without overwhelming complexity or unnecessary challenges. The game also requires a resource pack, which is essential for gameplay as it includes elements that cannot be implemented through the datapack alone.
 ### Player Experience Features
