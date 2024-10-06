@@ -1,0 +1,15 @@
+{
+    "stt.name": "Slower that a Turtle",
+    "stt.version": "Vanilla ALPHA-0.1",
+    "stt.author": "Datapack by Ami_Amai",
+
+
+    "stt.world.features.title": "* World Features",
+    "stt.world.features": "- Infinite water sources are disabled\n- Mobs move 42% faster than normal\n- Creepers explode 66% quicker\n- Mobs track players from five times the normal distance",
+
+    "stt.player.features.title": "* Player Expirience Features",
+    "stt.player.features": "- F3 debug information is disabled\n- Player health is reduced by 70%\n- Player movement speed is slowed by 20%\n- Mining speed is decreased by 90%\n- Nights cannot be skipped",
+
+    "stt.resourcepack.features.title": "* Resource Pack Features",
+    "stt.resourcepack.features": "- Loading screen text translated\n- Hunger, armor, air, and XP bars are hidden\n- Ore textures are partially masked, making it impossible to identify ores before mining"
+}
