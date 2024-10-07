@@ -6,7 +6,8 @@ The datapack brings a different survival experience in a hardcore world:
 * Vanilla gameplay, but more slow and thoughtful.
 * Exploration, even for players who already know everything.
 * Gameplay that makes simple things feel like real achievements.
- The game also requires a resource pack, which is essential for gameplay as it includes elements that cannot be implemented through the datapack alone.
+
+The game also requires a resource pack, which is essential for gameplay as it includes elements that cannot be implemented through the datapack alone.
 ### Player Experience Features
 * F3 debug information is disabled
 * Player health is reduced by 70%
