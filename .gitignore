@@ -2,7 +2,7 @@
 .vscode/*
 
 # bin/*
-source/*
+# source/*
 
 # build/build.sh
 # build/.build_config
@@ -11,6 +11,8 @@ source/*
 
 datapacks/vanilla/.vscode
 # datapacks/vanilla/spyglass.json
+datapacks/vanilla-half/.vscode
+# datapacks/vanilla-half/spyglass.json
 datapacks/food-rebalance/.vscode
 # datapacks/food-rebalance/spyglass.json
 

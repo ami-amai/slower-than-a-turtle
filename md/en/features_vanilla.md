@@ -9,6 +9,6 @@
 # World Features
 
 * Infinite water sources are disabled.
-* Mobs move 42% faster than normal.
+* Mobs move 35% faster than normal.
 * Creepers explode 66% quicker.
 * Mobs track players from five times the normal distance.
