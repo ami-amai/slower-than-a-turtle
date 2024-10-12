@@ -1,15 +1,17 @@
 {
-    "stt.name": "Slower that a Turtle",
-    "stt.version": "Vanilla ALPHA-0.1",
+    "stt.name": "Slower than a Turtle",
+    "stt.version": "Vanilla Alpha-0.1",
     "stt.author": "Datapack by Ami_Amai",
 
+    "stt.description.title": "About the Datapack",
+    "stt.description": "The datapack offers a unique hardcore survival experience:\n* Slow-paced, measured gameplay.\n* World exploration, even for experienced players.\n* Common items become a real achievement.",
 
-    "stt.world.features.title": "* World Features",
-    "stt.world.features": "- Infinite water sources are disabled\n- Mobs move 42% faster than normal\n- Creepers explode 66% quicker\n- Mobs track players from five times the normal distance",
+    "stt.github.title": "* Github page",
+    "stt.github": "https://github.com/ami-amai/slower-than-a-turtle/ (Click to Copy)",
 
-    "stt.player.features.title": "* Player Expirience Features",
-    "stt.player.features": "- F3 debug information is disabled\n- Player health is reduced by 70%\n- Player movement speed is slowed by 20%\n- Mining speed is decreased by 90%\n- Nights cannot be skipped",
+    "stt.github.readme.title": "* README",
+    "stt.github.readme": "https://github.com/ami-amai/slower-than-a-turtle/blob/main/md/en/README.md (Click to Copy)",
 
-    "stt.resourcepack.features.title": "* Resource Pack Features",
-    "stt.resourcepack.features": "- Loading screen text translated\n- Hunger, armor, air, and XP bars are hidden\n- Ore textures are partially masked, making it impossible to identify ores before mining"
+    "stt.github.features.title": "* All Features",
+    "stt.github.features": "https://github.com/ami-amai/slower-than-a-turtle/blob/main/md/en/features_list.md (Click to Copy)"
 }

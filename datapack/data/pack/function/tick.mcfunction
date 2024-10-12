@@ -1,1 +1,0 @@
-function pack:vanilla/vanilla.tick

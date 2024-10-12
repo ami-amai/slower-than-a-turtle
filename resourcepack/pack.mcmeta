@@ -1,21 +1,6 @@
 {
     "pack": {
-        "pack_format": 18,
-        "supported_formats": [
-            18,
-            34
-        ],
-        "description": "Slower that a Turtle resourcepack"
-    },
-    "overlays": {
-        "entries": [
-            {
-                "formats": {
-                    "min_inclusive": 18,
-                    "max_inclusive": 22
-                },
-                "directory": "20.2-20.4"
-            }
-        ]
+        "pack_format": 34,
+        "description": "Resourcepack for Slower than a Turtle datapack"
     }
 }

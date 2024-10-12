@@ -1,15 +1,18 @@
 {
-    "stt.name": "Slower that a Turtle",
-    "stt.version": "Ванила АЛЬФА-0.1",
+    "stt.name": "Slower than a Turtle",
+    "stt.version": "Ванилла АЛЬФА-0.1",
     "stt.author": "Датапак от Ami_Amai",
 
+    "stt.description.title": "О датапаке",
+    "stt.description": "Датапак предлагает уникальный опыт выживания в хардкор мире:\n* Медленный, размеренный геймплей.\n* Исследование мира даже для тех, кто умеет играть.\n* Обычные вещи, которые станут реальным достижением.",
 
-    "stt.world.features.title": "* Особенности мира",
-    "stt.world.features": "- Бесконечные источники воды отключены\n- Мобы движутся на 42% быстрее\n- Криперы взрываются на 66% быстрее\n- Мобы преследуют игрока в 5 раз большую дистанцию",
+    "stt.github.title": "* Страница Github",
+    "stt.github": "https://github.com/ami-amai/slower-than-a-turtle/ (Нажми чтобы скопировать)",
 
-    "stt.player.features.title": "* Особенности опыта игрока",
-    "stt.player.features": "- Выключена различная информация в F3\n- Игрок имеет на 70% меньше здоровья\n- Передвижение игрока замедлено на 20%\n- Скорость копания уменьшена на 90%\n- Ночь невозможно пропустить",
+    "stt.github.readme.title": "* Прочитай меня",
+    "stt.github.readme": "https://github.com/ami-amai/slower-than-a-turtle/blob/main/README.md (Нажми чтобы скопировать)",
 
-    "stt.resourcepack.features.title": "* Особенности ресурспака",
-    "stt.resourcepack.features": "- Перевод загрузочного сообщения\n- Скрыты показатели голода, брони, воздуха, количество опыта до следущего уровня\n- Текстура руды частично скрыто, нельзя определить конкретную руду до вскапывания"
+    "stt.github.features.title": "* Все особенности",
+    "stt.github.features": "https://github.com/ami-amai/slower-than-a-turtle/blob/main/md/en/features_list.md (Нажми чтобы скопировать)"
+    
 }
