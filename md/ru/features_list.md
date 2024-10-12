@@ -1,7 +1,6 @@
 # Список всех особенностей
 
 * [Ососбенности Ваниллы](features_vanilla)
-* [Особенности Переработки еды](features_food-rebalance)
 
 * [Особенности Ресурспака](features_resourcepack)
 
