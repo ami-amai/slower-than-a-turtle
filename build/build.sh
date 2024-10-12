@@ -39,10 +39,11 @@ break; done
 }
 
 select_build_datapack_version () {
-select __datapack__ in "${datapack[0]}" "${datapack[1]}"; do
+select __datapack__ in "${datapack[0]}" "${datapack[1]}" "${datapack[2]}"; do
 case ${__datapack__} in
 "${datapack[0]}") __build_folder__=${__datapacks__}${__datapack__};;
 "${datapack[1]}") __build_folder__=${__datapacks__}${__datapack__};;
+"${datapack[2]}") __build_folder__=${__datapacks__}${__datapack__};;
 esac
 break; done
 _bin_file_="${build_name}-${build_type}-${__datapack__}-${build_version}.zip"
