@@ -1,8 +1,8 @@
 # List of All Features
 
-* [Vanilla Features](features_vanilla)
-* [Vanilla Half Features](features_vanilla_half)
+* [Vanilla Features](md/enfeatures_vanilla)
+* [Vanilla Half Features](md/enfeatures_vanilla_half)
 
-* [Resourcepack Features](features_resourcepack)
+* [Resourcepack Features](md/en/features_resourcepack)
 
 [Russian list of Features](md/ru/README.md)
