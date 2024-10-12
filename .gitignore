@@ -1,18 +1,18 @@
 .git/*
 .vscode/*
 
-bin/*
+# bin/*
 source/*
 
-build/build.sh
-build/.build_config
+# build/build.sh
+# build/.build_config
 
-datapacks/food-rebalance/*
+# datapacks/food-rebalance/*
 
 datapacks/vanilla/.vscode
-datapacks/vanilla/spyglass.json
+# datapacks/vanilla/spyglass.json
 datapacks/food-rebalance/.vscode
-datapacks/food-rebalance/spyglass.json
+# datapacks/food-rebalance/spyglass.json
 
-md/en/features_food-rebalance.md
-md/ru/features_food-rebalance.md
+# md/en/features_food-rebalance.md
+# md/ru/features_food-rebalance.md
