@@ -1,9 +1,9 @@
 # Gameplay Features
 
 * F3 debug information is disabled.
-* Player health is reduced by 35%.
+* Player health is reduced by 30%.
 * Player movement speed is slowed by 10%.
-* Mining speed is decreased by 45%.
+* Mining speed is decreased by 80%.
 * Nights cannot be skipped.
 
 # World Features
