@@ -1,7 +1,7 @@
 # List of All Features
 
 * [Vanilla Features](features_vanilla)
-* [Food Rebalance Features](features_food-rebalance)
+* [Vanilla Half Features](features_vanilla_half)
 
 * [Resourcepack Features](features_resourcepack)
 
