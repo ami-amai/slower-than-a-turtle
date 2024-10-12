@@ -1,5 +1,5 @@
 #!/bin/sh
-build_version="Alpha-v0.1"
+build_version="Alpha-v0.2"
 
 build_name="Slower-Than-a-Turtle"
 mcmeta="pack.mcmeta"
