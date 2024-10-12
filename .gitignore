@@ -2,8 +2,10 @@
 .vscode/*
 
 bin/*
-build/*
 source/*
+
+build/build.sh
+build/.build_config
 
 datapacks/food-rebalance/*
 
