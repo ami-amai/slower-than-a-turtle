@@ -1,1 +1,0 @@
-execute as @e[type=creeper] if data entity @s {Fuse:30s} run data merge entity @s {Fuse:10s}

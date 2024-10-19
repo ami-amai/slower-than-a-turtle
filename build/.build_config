@@ -1,7 +1,0 @@
-#!/bin/sh
-build_version="Alpha-v0.1"
-
-build_name="Slower-Than-a-Turtle"
-mcmeta="pack.mcmeta"
-
-datapack=("vanilla" "vanilla-half" "food-rebalance")
