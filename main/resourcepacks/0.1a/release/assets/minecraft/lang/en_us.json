@@ -1,6 +1,5 @@
 {
     "stt.name": "Slower than a Turtle",
-    "stt.version": "Alpha-0.1",
     "stt.author": "Datapack by Ami_Amai",
 
     "stt.description.title": "About the Datapack",
@@ -9,9 +8,6 @@
     "stt.github.title": "* Github page",
     "stt.github": "https://github.com/ami-amai/slower-than-a-turtle/ (Click to Copy)",
 
-    "stt.github.readme.title": "* README",
-    "stt.github.readme": "https://github.com/ami-amai/slower-than-a-turtle/blob/main/md/en/README.md (Click to Copy)",
-
-    "stt.github.features.title": "* All Features",
-    "stt.github.features": "https://github.com/ami-amai/slower-than-a-turtle/blob/main/md/en/features_list.md (Click to Copy)"
+    "stt.github.features.title": "* Changelog",
+    "stt.github.features": "https://github.com/ami-amai/slower-than-a-turtle/blob/main/md/en/changelog/latest.md (Click to Copy)"
 }

@@ -1,6 +1,5 @@
 {
     "stt.name": "Slower than a Turtle",
-    "stt.version": "Альфа-0.1",
     "stt.author": "Датапак от Ami_Amai",
 
     "stt.description.title": "О датапаке",
@@ -9,10 +8,7 @@
     "stt.github.title": "* Страница Github",
     "stt.github": "https://github.com/ami-amai/slower-than-a-turtle/ (Нажми чтобы скопировать)",
 
-    "stt.github.readme.title": "* Прочитай меня",
-    "stt.github.readme": "https://github.com/ami-amai/slower-than-a-turtle/blob/main/README.md (Нажми чтобы скопировать)",
-
-    "stt.github.features.title": "* Все особенности",
-    "stt.github.features": "https://github.com/ami-amai/slower-than-a-turtle/blob/main/md/en/features_list.md (Нажми чтобы скопировать)"
+    "stt.github.features.title": "* Изменения",
+    "stt.github.features": "https://github.com/ami-amai/slower-than-a-turtle/blob/main/md/en/changelog/latest.md (Нажми чтобы скопировать)"
     
 }
