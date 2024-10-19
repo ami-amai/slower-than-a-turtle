@@ -1,0 +1,1 @@
+execute as @e[type=!player] if entity @s[tag=stt.vanilla.mob] run tag @s remove stt.vanilla.mob

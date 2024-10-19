@@ -1,0 +1,6 @@
+#!/bin/sh
+name="Slower-Than-a-Turtle"
+latest_version="0.2a"
+
+datapack=("vanilla" "vanilla-half" "food-rebalance")
+release=("release" "dev")
