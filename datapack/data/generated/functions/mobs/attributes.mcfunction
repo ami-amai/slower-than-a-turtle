@@ -1,0 +1,9 @@
+execute as @e[type=minecraft:zombie,tag=!attributes_applied] run function generated:mobs/apply_attributes_to_one
+execute as @e[type=minecraft:skeleton,tag=!attributes_applied] run function generated:mobs/apply_attributes_to_one
+execute as @e[type=minecraft:spider,tag=!attributes_applied] run function generated:mobs/apply_attributes_to_one
+execute as @e[type=minecraft:creeper,tag=!attributes_applied] run function generated:mobs/apply_attributes_to_one
+execute as @e[type=minecraft:enderman,tag=!attributes_applied] run function generated:mobs/apply_attributes_to_one
+execute as @e[type=minecraft:witch,tag=!attributes_applied] run function generated:mobs/apply_attributes_to_one
+execute as @e[type=minecraft:drowned,tag=!attributes_applied] run function generated:mobs/apply_attributes_to_one
+execute as @e[type=minecraft:husk,tag=!attributes_applied] run function generated:mobs/apply_attributes_to_one
+execute as @e[type=minecraft:stray,tag=!attributes_applied] run function generated:mobs/apply_attributes_to_one

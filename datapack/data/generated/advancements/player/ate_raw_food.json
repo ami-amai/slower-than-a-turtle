@@ -1,0 +1,23 @@
+{
+    "criteria": {
+        "ate_raw_food": {
+            "trigger": "minecraft:consume_item",
+            "conditions": {
+                "item": {
+                    "items": [
+                        "minecraft:beef",
+                        "minecraft:porkchop",
+                        "minecraft:chicken",
+                        "minecraft:cod",
+                        "minecraft:salmon",
+                        "minecraft:mutton",
+                        "minecraft:rabbit"
+                    ]
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "generated:player/ate_raw_food_reward"
+    }
+}

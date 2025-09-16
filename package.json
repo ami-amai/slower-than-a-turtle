@@ -1,0 +1,25 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "This is my first publicly released datapack. Designed for version 1.21+. It will be gradually developed and improved.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ami-amai/slower-than-a-turtle.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/ami-amai/slower-than-a-turtle/issues"
+  },
+  "homepage": "https://github.com/ami-amai/slower-than-a-turtle#readme",
+  "dependencies": {
+    "archiver": "^7.0.1",
+    "fs-extra": "^11.3.2"
+  }
+}

@@ -1,0 +1,1 @@
+execute as @a[tag=!player_attrs_applied] run function generated:player/apply_attributes_to_one

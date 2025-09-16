@@ -1,0 +1,43 @@
+{
+    "name": "Slower Than a Turtle",
+    "version": "0.1a",
+    "datapack": {
+        "name": "slower-than-a-turtle-datapack",
+        "pack_format": 81
+    },
+    "resourcepack": {
+        "name": "slower-than-a-turtle-resourcepack",
+        "pack_format": 64
+    },
+    "game_mechanics": {
+        "creeper": {
+            "fuse_time": 7
+        },
+        "mobs": {
+            "health_multiplier": 2.0,
+            "speed": 0.238,
+            "list": [
+                "zombie", "skeleton", "spider", "creeper", "enderman", "witch", "drowned", "husk", "stray"
+            ]
+        },
+        "player": {
+            "max_health": 10,
+            "block_break_speed_multiplier": 0.1,
+            "passive_mob_attack_damage": 2
+        },
+        "passive_mobs": [
+            "cow", "pig", "chicken", "sheep", "squid", "glow_squid", "cod", "salmon", "pufferfish", "tropical_fish", "rabbit", "horse", "donkey", "mule", "llama"
+        ],
+        "raw_food": {
+            "hunger_duration": 140,
+            "list": [
+                "beef", "porkchop", "chicken", "cod", "salmon", "mutton", "rabbit"
+            ]
+        },
+        "resourcepack_generation": {
+            "hide_ui": true,
+            "unify_ores": true,
+            "unify_raw_ores": true
+        }
+    }
+}
