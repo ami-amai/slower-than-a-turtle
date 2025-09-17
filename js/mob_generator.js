@@ -4,26 +4,14 @@ const crypto = require('crypto');
 const config = require('../config.json');
 
 const generatedPath = './datapack/data/generated';
-const functionsPath = path.join(generatedPath, 'functions');
 const tagsPath = path.join(generatedPath, 'tags', 'entity_types');
 
 async function generate() {
     console.log('Generating and optimizing mob attributes...');
-    const mobFunctionsPath = path.join(functionsPath, 'mobs');
-    await fs.ensureDir(mobFunctionsPath);
     await fs.ensureDir(tagsPath);
 
-    const { mobs, creeper } = config.game_mechanics;
+    const { mobs, creeper, debug } = config.game_mechanics;
     const healthModifierUUID = crypto.randomUUID();
-
-    // Create the helper function that applies attributes to a single entity (@s)
-    const singleMobAttributeFunc = [
-        `attribute @s minecraft:generic.max_health modifier add ${healthModifierUUID} "Double Health" 1.0 multiply_base`,
-        `attribute @s minecraft:generic.movement_speed base set ${mobs.speed}`,
-        `effect give @s minecraft:instant_health 1 255 true`,
-        `tag @s add attributes_applied`
-    ];
-    await fs.writeFile(path.join(mobFunctionsPath, 'apply_attributes_to_one.mcfunction'), singleMobAttributeFunc.join('\n'));
 
     // Create the entity type tag for all mobs that need attributes applied
     const mobsToModifyTag = {
@@ -32,14 +20,33 @@ async function generate() {
     };
     await fs.writeJson(path.join(tagsPath, 'mobs_to_modify.json'), mobsToModifyTag, { spaces: 4 });
 
+    // Define the selector once
+    const mobSelector = `@e[type=#generated:mobs_to_modify,tag=!attributes_applied]`;
+
     // Prepare the commands to be run on a tick
     const tickCommands = [
-        // Use the new entity type tag for a massive performance improvement
-        '# Apply attributes to all new mobs of specified types',
-        `execute as @e[type=#generated:mobs_to_modify,tag=!attributes_applied] run function generated:mobs/apply_attributes_to_one`,
+        '# Apply attributes to all new mobs of specified types'
+    ];
+
+    if (debug) {
+        // This debug message is less useful now, as it will fire for each command,
+        // but it's kept to confirm the selector is finding entities.
+        tickCommands.push(`execute as ${mobSelector} run tellraw @a [{"text": "Applying attributes to mob: ", "color": "gray"}, {"selector": "@s"}]`);
+    }
+
+    // Add the full commands directly, eliminating the need for a helper function and @s
+    tickCommands.push(
+        `attribute ${mobSelector} minecraft:generic.max_health modifier add ${healthModifierUUID} "Double Health" 1.0 multiply_base`,
+        `attribute ${mobSelector} minecraft:generic.movement_speed base set ${mobs.speed}`,
+        `effect give ${mobSelector} minecraft:instant_health 1 255 true`,
+        `tag ${mobSelector} add attributes_applied`
+    );
+
+    // Add command for creeper fuse time
+    tickCommands.push(
         '# Set creeper fuse time',
         `execute as @e[type=creeper] run data merge entity @s {Fuse:${creeper.fuse_time}}`
-    ];
+    );
 
     console.log('Mob attribute generation complete.');
 

@@ -12,18 +12,28 @@ async function generate() {
     await fs.ensureDir(playerFunctionsPath);
     await fs.ensureDir(advancementsPath);
 
-    const { player, passive_mobs, raw_food } = config.game_mechanics;
+    const { player, passive_mobs, raw_food, debug } = config.game_mechanics;
+
+    // Define the selector for players who need attributes applied
+    const playerSelector = `@a[tag=!player_attrs_applied]`;
 
     // 1. Player Attributes (Health and Mining Speed)
-    const applyAttributesFunc = [
-        `attribute @s minecraft:generic.max_health base set ${player.max_health}`,
-        `attribute @s minecraft:player.block_break_speed base set ${player.block_break_speed_multiplier}`,
-        `tag @s add player_attrs_applied`
+    // The helper function is removed, and commands are prepared for the main tick function.
+    const playerAttributeCommands = [
+        '# Apply attributes to all new players'
     ];
-    await fs.writeFile(path.join(playerFunctionsPath, 'apply_attributes_to_one.mcfunction'), applyAttributesFunc.join('\n'));
+
+    if (debug) {
+        playerAttributeCommands.push(`tellraw ${playerSelector} {"text": "Applying player attributes (health/mining speed)...", "color": "yellow"}`);
+    }
+
+    playerAttributeCommands.push(
+        `attribute ${playerSelector} minecraft:generic.max_health base set ${player.max_health}`,
+        `attribute ${playerSelector} minecraft:player.block_break_speed base set ${player.block_break_speed_multiplier}`,
+        `tag ${playerSelector} add player_attrs_applied`
+    );
 
     // 2. Damage from Passive Mobs (REFACTORED FOR RELIABILITY)
-    // Create a separate, simple advancement for each passive mob.
     passive_mobs.forEach(async (mob) => {
         const advancement = {
             criteria: {
@@ -43,8 +53,6 @@ async function generate() {
         await fs.writeJson(path.join(advancementsPath, `attacked_${mob}.json`), advancement, { spaces: 4 });
     });
 
-    // Create a single reward function that revokes ALL passive mob advancements.
-    // This is robust and ensures the triggers can always fire again.
     const passiveMobRewardFunction = [
         `damage @s ${player.passive_mob_attack_damage} minecraft:generic`
     ];
@@ -78,15 +86,10 @@ async function generate() {
     ];
     await fs.writeFile(path.join(playerFunctionsPath, 'ate_raw_food_reward.mcfunction'), rawFoodRewardFunction.join('\n'));
 
-    // Prepare the commands to be run on a tick
-    const tickCommands = [
-        `execute as @a[tag=!player_attrs_applied] run function generated:player/apply_attributes_to_one`
-    ];
-
     console.log('Player mechanics generation complete.');
 
     // Return the commands to be added to the main tick function
-    return { tickCommands };
+    return { tickCommands: playerAttributeCommands };
 }
 
 module.exports = { generate };

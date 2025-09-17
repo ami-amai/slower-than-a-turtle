@@ -1,3 +1,6 @@
 {
-    "values": ["vanilla:tick"]
+    "values": [
+        "vanilla:tick",
+        "generated:tick"
+    ]
 }

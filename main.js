@@ -1,5 +1,6 @@
 const fs = require('fs-extra');
 const archiver = require('archiver');
+const path = require('path');
 const config = require('./config.json');
 const meta = require('./js/meta');
 const mobGenerator = require('./js/mob_generator');
@@ -60,23 +61,28 @@ async function build() {
         await fs.ensureDir(functionsPath);
         await fs.writeFile(`${functionsPath}/tick.mcfunction`, allTickCommands.join('\n'));
 
-        // --- Create Minecraft Tick Tag ---
-        const minecraftTagsPath = './datapack/data/minecraft/tags/functions';
-        await fs.ensureDir(minecraftTagsPath);
-        const tickJson = {
-            values: [
-                'minecraft:tick', // Assuming this is desired from vanilla pack
-                'generated:tick'
-            ]
-        };
-        // I will read the original tick.json from the source datapack and add to it
-        const sourceTickJsonPath = './datapack/data/minecraft/tags/function/tick.json';
-        let finalTickJson = { values: ['generated:tick'] };
-        if (await fs.pathExists(sourceTickJsonPath)) {
-            const sourceTickJson = await fs.readJson(sourceTickJsonPath);
-            finalTickJson.values.push(...sourceTickJson.values);
+        // --- Safely add to Minecraft Tick Tag ---
+        const tickJsonPath = './datapack/data/minecraft/tags/function/tick.json';
+        let tickJson = { values: [] };
+
+        // Read existing tick.json if it exists
+        if (await fs.pathExists(tickJsonPath)) {
+            tickJson = await fs.readJson(tickJsonPath);
         }
-        await fs.writeJson(`${minecraftTagsPath}/tick.json`, finalTickJson, { spaces: 4 });
+
+        // Ensure 'values' array exists
+        if (!tickJson.values) {
+            tickJson.values = [];
+        }
+
+        // Add our generated tick function if it's not already there
+        if (!tickJson.values.includes('generated:tick')) {
+            tickJson.values.push('generated:tick');
+        }
+
+        // Write the updated file back
+        await fs.ensureDir(path.dirname(tickJsonPath));
+        await fs.writeJson(tickJsonPath, tickJson, { spaces: 4 });
 
 
         // --- Datapack ---

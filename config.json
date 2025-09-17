@@ -10,6 +10,7 @@
         "pack_format": 64
     },
     "game_mechanics": {
+        "debug": false,
         "creeper": {
             "fuse_time": 7
         },
