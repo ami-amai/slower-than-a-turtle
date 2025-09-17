@@ -1,0 +1,15 @@
+{
+    "criteria": {
+        "attacked_pufferfish": {
+            "trigger": "minecraft:player_hurt_entity",
+            "conditions": {
+                "entity": {
+                    "type": "minecraft:pufferfish"
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "generated:player/attacked_passive_mob_reward"
+    }
+}

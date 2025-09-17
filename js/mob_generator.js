@@ -3,12 +3,15 @@ const path = require('path');
 const crypto = require('crypto');
 const config = require('../config.json');
 
-const functionsPath = './datapack/data/generated/functions';
+const generatedPath = './datapack/data/generated';
+const functionsPath = path.join(generatedPath, 'functions');
+const tagsPath = path.join(generatedPath, 'tags', 'entity_types');
 
 async function generate() {
-    console.log('Generating mob attributes...');
+    console.log('Generating and optimizing mob attributes...');
     const mobFunctionsPath = path.join(functionsPath, 'mobs');
     await fs.ensureDir(mobFunctionsPath);
+    await fs.ensureDir(tagsPath);
 
     const { mobs, creeper } = config.game_mechanics;
     const healthModifierUUID = crypto.randomUUID();
@@ -22,16 +25,21 @@ async function generate() {
     ];
     await fs.writeFile(path.join(mobFunctionsPath, 'apply_attributes_to_one.mcfunction'), singleMobAttributeFunc.join('\n'));
 
+    // Create the entity type tag for all mobs that need attributes applied
+    const mobsToModifyTag = {
+        replace: false,
+        values: mobs.list.map(mob => `minecraft:${mob}`)
+    };
+    await fs.writeJson(path.join(tagsPath, 'mobs_to_modify.json'), mobsToModifyTag, { spaces: 4 });
+
     // Prepare the commands to be run on a tick
-    const tickCommands = [];
-
-    // Add commands to check for new mobs and apply attributes
-    mobs.list.forEach(mobType => {
-        tickCommands.push(`execute as @e[type=minecraft:${mobType},tag=!attributes_applied] run function generated:mobs/apply_attributes_to_one`);
-    });
-
-    // Add command for creeper fuse time
-    tickCommands.push(`execute as @e[type=creeper] run data merge entity @s {Fuse:${creeper.fuse_time}}`);
+    const tickCommands = [
+        // Use the new entity type tag for a massive performance improvement
+        '# Apply attributes to all new mobs of specified types',
+        `execute as @e[type=#generated:mobs_to_modify,tag=!attributes_applied] run function generated:mobs/apply_attributes_to_one`,
+        '# Set creeper fuse time',
+        `execute as @e[type=creeper] run data merge entity @s {Fuse:${creeper.fuse_time}}`
+    ];
 
     console.log('Mob attribute generation complete.');
 

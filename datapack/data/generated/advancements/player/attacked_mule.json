@@ -1,0 +1,15 @@
+{
+    "criteria": {
+        "attacked_mule": {
+            "trigger": "minecraft:player_hurt_entity",
+            "conditions": {
+                "entity": {
+                    "type": "minecraft:mule"
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "generated:player/attacked_passive_mob_reward"
+    }
+}
