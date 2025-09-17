@@ -23,10 +23,6 @@ async function generate() {
     ];
     await fs.writeFile(path.join(playerFunctionsPath, 'apply_attributes_to_one.mcfunction'), applyAttributesFunc.join('\n'));
 
-    const checkAttributesFunc = `execute as @a[tag=!player_attrs_applied] run function generated:player/apply_attributes_to_one`;
-    await fs.writeFile(path.join(playerFunctionsPath, 'attributes.mcfunction'), checkAttributesFunc);
-
-
     // 2. Damage from Passive Mobs
     const passiveMobAdvancement = {
         criteria: {},
@@ -77,21 +73,15 @@ async function generate() {
     ];
     await fs.writeFile(path.join(playerFunctionsPath, 'ate_raw_food_reward.mcfunction'), rawFoodRewardFunction.join('\n'));
 
-
-    // Add player attribute check to the main tick function
-    const mainTickFunctionPath = path.join(functionsPath, 'tick.mcfunction');
-    let tickCommands = (await fs.readFile(mainTickFunctionPath)).toString().split('\n').filter(line => line.trim() !== '');
-
-    // Remove old mining fatigue function if it exists
-    tickCommands = tickCommands.filter(line => !line.includes('mining_fatigue'));
-
-    // Add new attributes function if it doesn't exist
-    if (!tickCommands.includes('function generated:player/attributes')) {
-        tickCommands.push('function generated:player/attributes');
-    }
-    await fs.writeFile(mainTickFunctionPath, tickCommands.join('\n'));
+    // Prepare the commands to be run on a tick
+    const tickCommands = [
+        `execute as @a[tag=!player_attrs_applied] run function generated:player/apply_attributes_to_one`
+    ];
 
     console.log('Player mechanics generation complete.');
+
+    // Return the commands to be added to the main tick function
+    return { tickCommands };
 }
 
 module.exports = { generate };

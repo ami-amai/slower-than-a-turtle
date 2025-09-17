@@ -1,1 +1,0 @@
-execute as @e[type=creeper] run data merge entity @s {Fuse:7}
