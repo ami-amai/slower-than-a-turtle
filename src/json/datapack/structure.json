@@ -1,0 +1,32 @@
+{
+    "file": {
+        "data": {
+            "minecraft": {
+                "tags": {
+                    "function": {
+                        "tick": "tick.json",
+                        "load": "tick.json"
+                    }
+                }
+            },
+            "datapack": {
+                "function": {
+                    "tick": "tick.mcfunction",
+                    "load": "tick.mcfunction"
+                }
+            }
+        }
+    },
+    "path": {
+        "data": {
+            "minecraft": {
+                "tags": {
+                    "function": "data/minecraft/tags/function/"
+                }
+            },
+            "datapack": {
+                "function": "data/datapack/function/"
+            }
+        }
+    }
+}

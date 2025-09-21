@@ -1,0 +1,25 @@
+{
+    "items": {
+        "ore": {
+            "overworld": [
+                "coal",
+                "copper",
+                "iron",
+                "gold",
+                "lapis",
+                "redstone",
+                "diamond",
+                "emerald"
+            ],
+            "nether": [
+                "gold",
+                "quartz"
+            ],
+            "ore": [
+                "copper",
+                "iron",
+                "gold"
+            ]
+        }
+    }
+}

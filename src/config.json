@@ -1,3 +1,6 @@
 {
-    
+    "format": {
+        "resources": 64,
+        "data": 81
+    }
 }

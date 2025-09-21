@@ -8,6 +8,27 @@ const textures = require("./js/textures")
 const resourcepackPath = "./resourcepacks/"
 const datapackPath = "./datapacks/"
 
+/*
+# Resourcepack
+* Meta +
+* Language
+* Archive
+
+# Datapack
+* Meta +
+* Datapack files
+* Functions
+* Archive
+
+
+
+
+
+Build Resourepack Resources
+
+
+*/
+
 
 // RESOURCEPACK
 Object.values(textures.textureConfig.ores.nether).forEach(ore => {

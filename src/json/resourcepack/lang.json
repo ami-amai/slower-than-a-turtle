@@ -1,0 +1,16 @@
+{
+    "en_us": {
+        "stone_ore": "Stone Ore",
+        "deepslate_ore": "Deepslate Ore",
+        "nether_ore": "Nether Ore",
+        "raw_ore": "Raw Ore",
+        "raw_ore_block": "Raw Ore Block"
+    },
+    "ru_ru": {
+        "stone_ore": "Рудоносный камень",
+        "deepslate_ore": "Рудноносный глубиный сланец",
+        "nether_ore": "Незерская руда",
+        "raw_ore": "Необработанная руда",
+        "raw_ore_block": "Блок необработанной руды"
+    }
+}
