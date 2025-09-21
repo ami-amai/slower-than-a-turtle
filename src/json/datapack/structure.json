@@ -1,5 +1,6 @@
 {
     "file": {
+        "meta": "pack.mcmeta",
         "data": {
             "minecraft": {
                 "tags": {
@@ -12,7 +13,11 @@
             "datapack": {
                 "function": {
                     "tick": "tick.mcfunction",
-                    "load": "tick.mcfunction"
+                    "load": "tick.mcfunction",
+                    "join": "join.mcfunction"
+                },
+                "advancements": {
+                    "join": "join.json"
                 }
             }
         }
@@ -25,7 +30,8 @@
                 }
             },
             "datapack": {
-                "function": "data/datapack/function/"
+                "function": "data/datapack/function/",
+                "advancements": "data/datapack/advancements/"
             }
         }
     }

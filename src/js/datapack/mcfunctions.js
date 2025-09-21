@@ -9,7 +9,9 @@ function loadFunction() {
 function tickFunction() {
     
     return `
-    
+    s
+    f
+    d
     `
 
 }
